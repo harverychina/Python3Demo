@@ -14,7 +14,7 @@ class Student(Person):
 class Teacher(Person):
     def __init__(self, name):
         (Teacher, self).__init__(name)
-        self.name = nasuperme
+        self.name = name
 
 
 class SkillMixin(object):
