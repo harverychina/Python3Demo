@@ -4,9 +4,9 @@ from pathlib import Path, PurePath
 # 导入excel和文件操作库
 
 # 指定要合并excel的路径
-src_path = '/Users/huangjiancong/Desktop/Python3Demo/Python自动化办公实战/批量处理Excel/调查问卷'
+src_path = '/Python自动化办公实战/批量处理Excel/拆分与合并/调查问卷'
 # 指定合并完成的路径
-dst_file = '/Users/huangjiancong/Desktop/Python3Demo/Python自动化办公实战/批量处理Excel/结果/result.xlsx'
+dst_file = '/Python自动化办公实战/批量处理Excel/拆分与合并/结果/result.xlsx'
 
 # 取得该目录下所有xlsx格式文件
 p = Path(src_path)

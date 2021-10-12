@@ -1,6 +1,6 @@
 import xlrd
 
-file = '/Users/huangjiancong/Desktop/Python3Demo/Python自动化办公实战/批量处理Excel/a.xls'
+file = '/Python自动化办公实战/批量处理Excel/拆分与合并/a.xls'
 
 data = xlrd.open_workbook(file)
 table = data.sheets()[0]

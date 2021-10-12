@@ -3,9 +3,9 @@ import xlwt
 from pathlib import Path, PurePath
 
 # 工资单文件
-salary_file = '/Users/huangjiancong/Desktop/Python3Demo/Python自动化办公实战/批量处理Excel/工资单/工资单.xlsx'
+salary_file = '/Python自动化办公实战/批量处理Excel/拆分与合并/工资单/工资单.xlsx'
 # 拆分文件保存路径
-dst_path = '/Users/huangjiancong/Desktop/Python3Demo/Python自动化办公实战/批量处理Excel/工资单'
+dst_path = '/Python自动化办公实战/批量处理Excel/拆分与合并/工资单'
 
 data = xlrd.open_workbook(salary_file)
 table = data.sheets()[0]

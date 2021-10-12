@@ -1,6 +1,6 @@
 import xlwt
 
-dst_file = "/Users/huangjiancong/Desktop/Python3Demo/Python自动化办公实战/批量处理Excel/b.xls"
+dst_file = "/Python自动化办公实战/批量处理Excel/拆分与合并/b.xls"
 
 workbook = xlwt.Workbook(encoding='utf-8')
 xlsheet = workbook.add_sheet("统计结果")
