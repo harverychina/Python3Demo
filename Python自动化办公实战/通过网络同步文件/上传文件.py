@@ -9,11 +9,12 @@ app.config['UPLOAD_FOLDER'] = os.getcwd()
 
 html = '''
 <!doctype html>
-<title>Upload new file</title>
-<h1>Upload new File</h1>
-<form action="" method=post encoding=multipart/form-data>
-<p><input type=file name=file><input type=submit value=Upload></p>
-</form>
+    <title>Upload new File</title>
+    <h1>Upload new File</h1>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
 '''
 
 
