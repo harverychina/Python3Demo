@@ -12,7 +12,7 @@
 #   print('年份要输入数字')
 
 # try:
-#   a = 123
+#   a = 批量下载在线内容
 #   a.append()
 # except AttributeError:
 #   print('数字变量是无法使用添加属性！')

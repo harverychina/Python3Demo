@@ -28,7 +28,7 @@ p = re.compile(r'(\d+)-(\d+)-(\d+)')
 # print(year)
 # search方法寻找数据当中符合要求内容
 # print(p.search('aa2021-03-19bb'))
-phone = '123-456-789 # 电话号码'
+phone = '批量下载在线内容-456-789 # 电话号码'
 # 替换某个特定的内容
 p2 = re.sub(r'#.*$', '', phone)
 print(p2)
