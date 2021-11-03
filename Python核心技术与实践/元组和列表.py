@@ -35,9 +35,9 @@ print(tup[1:3])   # 返回元组中索引从1到2的子元组
 l2 = [[1, 2, 3], [4, 5]]
 tup2 = ((1, 2, 3), (4, 5, 6))
 # 将元组转成列表
-print(list((1, 2 ,3)))
+print(list((1, 2, 3)))
 # 将列表转成元组
-print(tuple([1 , 2 , 3]))
+print(tuple([1, 2, 3]))
 
 """
 列表和元组常用的内置函数
@@ -54,3 +54,43 @@ print(l3)
 l3.sort()
 print(l3)
 
+# 列表和元组存储方式的差异
+l4 = [1, 2, 3]
+print(l.__sizeof__())
+
+tup3 = (1, 2, 3)
+print(tup3.__sizeof__())
+
+l5 = []
+print(l5.__sizeof__())  # 空列表的存储空间为40字节
+l5.append(1)
+print(l5.__sizeof__()) # 列表为其分配了可以存储4个元素的空间（72 -40）/8 = 4
+l5.append(2)
+print(l5.__sizeof__())  # 由于之前分配了空间所以加入元素2，列表空间不变
+l5.append(3)
+print(l5.__sizeof__())
+l5.append(4)
+print(l5.__sizeof__())
+l5.append(5)  # 加入元素5之后，列表的空间不足，所以又额外分配了可以存储4个元素的空间（104 - 72）/ 8 = 4
+print(l5.__sizeof__())
+
+"""
+测试列表和元组初始化和索引操作速度
+"""
+#  python3 -m timeit 'x=(1,2,3,4,5,6)'
+# 50000000 loops, best of 5: 8.5 nsec per loop
+# python3 -m timeit 'x=[1,2,3,4,5,6]'
+# 5000000 loops, best of 5: 40.4 nsec per loop
+# python3 -m timeit 'x=[1,2,3,4,5,6]' 'y=x[3]'
+# 5000000 loops, best of 5: 58.8 nsec per loop
+# python3 -m timeit 'x=(1,2,3,4,5,6)' 'y=x[3]'
+# 10000000 loops, best of 5: 24.4 nsec per loop
+
+# 元组使用场景：存储数据和数量不变，比如你有一个函数，需要返回的是一个地点的经纬度，然后直接传给前端渲染。
+# 列表使用场景：存储数据和数量是可变，比如社交平台上的一个日志功能，是统计一个用户在一周之内看了哪些用户的帖子
+
+"""
+empty_list = list()    # 5000000 loops, best of 5: 50.6 nsec per loop
+# 以上创建空列表，是使用function call，创建stack，进行一系列参数检查操作，所需时间会比下面的方式要长
+empty_list = []        # 20000000 loops, best of 5: 15.3 nsec per loop
+"""
