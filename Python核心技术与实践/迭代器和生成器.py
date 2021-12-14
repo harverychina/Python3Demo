@@ -22,3 +22,4 @@ params = [
 for param in params:
     print('{} is iterable? {}'.format(param, is_iterable(param)))
 
+
